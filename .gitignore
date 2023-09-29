@@ -6,3 +6,6 @@ dist-ssr
 .eslintcache
 .husky
 *.log
+.firebase
+.firebaserc
+.github

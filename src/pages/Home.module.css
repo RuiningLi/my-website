@@ -52,7 +52,6 @@
 .photo video,
 .photo img,
 .photo picture {
-  height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
