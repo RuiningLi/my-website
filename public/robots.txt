@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ruiningli.com/sitemap.xml

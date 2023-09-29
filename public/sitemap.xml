@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ruiningli.com</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh" />
+  </url>
+
+  <url>
+    <loc>https://ruiningli.com/experiences/citadel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/experiences/citadel" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/experiences/citadel" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/zh/experiences/citadel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/experiences/citadel" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/experiences/citadel" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/experiences/goldman-sachs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/experiences/goldman-sachs" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/experiences/goldman-sachs" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/zh/experiences/goldman-sachs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/experiences/goldman-sachs" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/experiences/goldman-sachs" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/experiences/pony-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/experiences/pony-ai" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/experiences/pony-ai" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/zh/experiences/pony-ai</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/experiences/pony-ai" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/experiences/pony-ai" />
+  </url>
+
+  <url>
+    <loc>https://ruiningli.com/education/oxford</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/education/oxford" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/education/oxford" />
+  </url>
+  <url>
+    <loc>https://ruiningli.com/zh/education/oxford</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ruiningli.com/education/oxford" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://ruiningli.com/zh/education/oxford" />
+  </url>
+</urlset>
