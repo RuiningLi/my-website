@@ -41,6 +41,7 @@ function Home(_props: HomeProps) {
           <div className={classes.photo}>
             <img src={ProfilePic} aria-hidden/>
             <span className={classes.photoNote}>{t("PROFILE_NOTE")}</span>
+            <span>TEMP</span>
             <div>
               <div>
               <a
