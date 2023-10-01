@@ -37,6 +37,7 @@ function PublicationCard({
   bibtex,
   ...rest
 }: PublicationCardProps) {
+  const me = "Ruining Li";
   return (
     <Banner {...rest}>
       <div className={classes.card}>
@@ -53,9 +54,13 @@ function PublicationCard({
           <p className={classes.author}>{authors.map(function(name) {
             return (
             <span className={classes.name}>
-              <a href={authors_to_website(name)} target='_blank'>
-                <span>{(name === authors[authors.length - 1] ? name : name + ",  ")}</span>
+              <a 
+                {...(name.replace('*', '') === me ? {} : { href : authors_to_website(name) })}
+                target='_blank'
+              >
+                <span>{name}</span>
               </a>
+              <span>{(name === authors[authors.length - 1] ? '' : ",  ")}</span>
             </span>);
           })}</p>
           <div className={classes.venue}>

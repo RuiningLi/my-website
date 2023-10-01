@@ -96,10 +96,10 @@ function Home(_props: HomeProps) {
               {t('TITLE_1')}
             </h3>
             <div className={classes.paragraph}>
-              {t("BRIEF_1", { interpolate: true})}
+              {t("BRIEF_1", { interpolate: true })}
             </div>
             <div className={classes.paragraph}>
-              {t("BRIEF_2", { interpolate: true})}
+              {t("BRIEF_2", { interpolate: true })}
             </div>
             <p>
             </p>
@@ -125,7 +125,7 @@ function Home(_props: HomeProps) {
               codeLink='https://github.com/elliottwu/MagicPony'
               videoLink='https://www.youtube.com/watch?v=KoLzpESstLk'
               pageLink='https://3dmagicpony.github.io/'
-              video={<video src={MagicPonyMP4} autoPlay loop></video>} />
+              video={<video autoPlay loop><source src={MagicPonyMP4} type="video/mp4"></source></video>} />
           </div>
         </Grid>
       </div>

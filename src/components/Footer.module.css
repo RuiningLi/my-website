@@ -48,3 +48,8 @@
   font-weight: 800;
   font-size: 1.2rem;
 }
+
+.final-address {
+  display: block;
+  font-size: 0.5rem;
+}

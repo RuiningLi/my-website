@@ -14,6 +14,11 @@ function Footer(_props: FooterProps) {
         <div className={classes.name}>{t('TITLE')}</div>
         <div className={classes.copyRight}>© {new Date().getFullYear()}</div>
       </div>
+      <div className={classes.finalAddress}>
+        <span>
+          {t('ADDRESS', { interpolate: true })}
+        </span>
+      </div>
     </footer>
   );
 }
