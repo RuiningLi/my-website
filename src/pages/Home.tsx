@@ -12,6 +12,7 @@ import classes from './Home.module.css';
 import { getLocalePath } from '../utils/pathname';
 
 import MagicPonyMP4 from '../../assets/publications/MagicPony/MagicPony_thumbnail.mp4';
+import Farm3DMP4 from '../../assets/publications/Farm3D/Farm3D_thumbnail.mp4';
 
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 import { SiGooglescholar } from 'react-icons/si';
@@ -39,11 +40,11 @@ function Home(_props: HomeProps) {
       ) : (
         <div className={classes.heroContainer}>
           <div className={classes.photo}>
-            <img src={ProfilePic} aria-hidden/>
+            <img src={ProfilePic} aria-hidden />
             <span className={classes.photoNote}>{t("PROFILE_NOTE")}</span>
             <div>
               <div>
-              <a
+                <a
                   className={classes.socialLink}
                   href="mailto:ruining.li@linacre.ox.ac.uk"
                   target="_blank"
@@ -111,6 +112,25 @@ function Home(_props: HomeProps) {
         <h2>{t('PUBLICATIONS_TITLE')}</h2>
 
         <Grid>
+          <div>
+            <PublicationCard
+              title='Farm3D: Learning Articulated 3D Animals by Distilling 2D Diffusion'
+              venue='3DV'
+              year='2024'
+              authors={["Tomas Jakab*", "Ruining Li*", "Shangzhe Wu", "Christian Rupprecht", "Andrea Vedaldi"]}
+              abstract='Farm3D learns an articulated object category entirely from "free" virtual supervision from a 2D diffusion-based 
+              image generator. We propose a framework that employs an image generator, such as Stable Diffusion, to produce training data 
+              for learning a reconstruction network from the ground up. Additionally, the diffusion model is incorporated as a scoring 
+              mechanism to further improve learning. Our method yields a monocular reconstruction network capable of generating controllable 
+              3D assets from a single input image, whether real or generated, in a matter of seconds.'
+              paperLink='https://arxiv.org/pdf/2304.10535.pdf'
+              pageLink='https://farm3d.github.io/'
+              video={<video autoPlay loop><source src={Farm3DMP4} type="video/mp4"></source></video>} />
+          </div>
+          {/* dummies  */}
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
           <div>
             <PublicationCard
               title='MagicPony: Learning Articulated 3D Animals in the Wild'

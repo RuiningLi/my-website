@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+.new-line div {
+  display: inline-block;
+}
+
 @media (min-width: 320px) {
   .hero-container {
     padding: 0 0 5rem;
