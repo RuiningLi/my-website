@@ -11,8 +11,10 @@ import OxfordSvg from '../../assets/Oxford.svg';
 import classes from './Home.module.css';
 import { getLocalePath } from '../utils/pathname';
 
-import MagicPonyMP4 from '../../assets/publications/MagicPony/MagicPony_thumbnail.mp4';
-import Farm3DMP4 from '../../assets/publications/Farm3D/Farm3D_thumbnail.mp4';
+import MagicPonyGIF from '../../assets/publications/MagicPony/MagicPony_thumbnail.gif';
+import Farm3DGIF from '../../assets/publications/Farm3D/Farm3D_thumbnail.gif';
+import FaunaGIF from '../../assets/publications/3DFauna/3DFauna_thumbnail.gif';
+import DragAPartGIF from '../../assets/publications/DragAPart/DragAPart_thumbnail.gif';
 
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 import { SiGooglescholar } from 'react-icons/si';
@@ -114,6 +116,62 @@ function Home(_props: HomeProps) {
         <Grid>
           <div>
             <PublicationCard
+              title='DragAPart: Learning a Part-Level Motion Prior for Articulated Objects'
+              venue='Arxiv Preprint'
+              year='2024'
+              authors={["Ruining Li", "Chuanxia Zheng", "Christian Rupprecht", "Andrea Vedaldi"]}
+              abstract='Our method, DragAPart, learns a motion prior for articulated objects with diffusion models. 
+              Differently from prior works that used drags to move an object, each drag in DragAPart represents a part-level 
+              interaction, resulting in a physically plausible deformation of the object shape. DragAPart is trained on a new 
+              synthetic dataset, Drag-a-Move, for this task, and generalizes well to real data and even unseen categories. 
+              The trained model is immediately useful for applications, such as segmenting movable parts and analyzing motion 
+              prompted by a drag.'
+              paperLink='https://arxiv.org/pdf/2403.15382.pdf'
+              pageLink='https://dragapart.github.io/'
+              demoLink='https://huggingface.co/spaces/rayli/DragAPart'
+              codeLink='https://github.com/RuiningLi/DragAPart'
+              video={<img src={DragAPartGIF}/>} />
+          </div>
+          {/* dummies  */}
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div>
+            <PublicationCard
+              title='Learning the 3D Fauna of the Web'
+              venue='CVPR'
+              year='2024'
+              authors={["Zizhang Li*", "Dor Litvak*", "Ruining Li", "Yunzhi Zhang", "Tomas Jakab", "Christian Rupprecht", "Shangzhe Wu", "Andrea Vedaldi", "Jiajun Wu"]}
+              abstract='Our method, 3D-Fauna, learns a pan-category deformable 3D model of more than 100 different animal species using only 2D Internet images 
+              as training data, without any prior shape models or keypoint annotations. At test time, the model can turn a single image of an quadruped instance 
+              into an articulated, textured 3D mesh in a feed-forward manner, ready for animation and rendering.'
+              paperLink='https://arxiv.org/pdf/2401.02400.pdf'
+              demoLink='https://huggingface.co/spaces/Kyle-Liz/3DFauna_demo'
+              pageLink='https://kyleleey.github.io/3DFauna/'
+              video={<img src={FaunaGIF}/>} />
+          </div>
+          {/* dummies  */}
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div>
+            <PublicationCard
               title='Farm3D: Learning Articulated 3D Animals by Distilling 2D Diffusion'
               venue='3DV'
               year='2024'
@@ -125,9 +183,17 @@ function Home(_props: HomeProps) {
               3D assets from a single input image, whether real or generated, in a matter of seconds.'
               paperLink='https://arxiv.org/pdf/2304.10535.pdf'
               pageLink='https://farm3d.github.io/'
-              video={<video autoPlay loop><source src={Farm3DMP4} type="video/mp4"></source></video>} />
+              video={<img src={Farm3DGIF}/>} />
           </div>
           {/* dummies  */}
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
           <div className={classes.newLine}></div>
           <div className={classes.newLine}></div>
           <div className={classes.newLine}></div>
@@ -145,7 +211,7 @@ function Home(_props: HomeProps) {
               codeLink='https://github.com/elliottwu/MagicPony'
               videoLink='https://www.youtube.com/watch?v=KoLzpESstLk'
               pageLink='https://3dmagicpony.github.io/'
-              video={<video autoPlay loop><source src={MagicPonyMP4} type="video/mp4"></source></video>} />
+              video={<img src={MagicPonyGIF}/>} />
           </div>
         </Grid>
       </div>

@@ -12,5 +12,20 @@ export default function author_to_website_url(name: string): string {
     if (name_ === "Andrea Vedaldi") {
         return 'https://www.robots.ox.ac.uk/~vedaldi/';
     }
+    if (name_ === "Zizhang Li") {
+        return 'https://kyleleey.github.io/';
+    }
+    if (name_ === "Dor Litvak") {
+        return 'https://dorlitvak.github.io/';
+    }
+    if (name_ === "Yunzhi Zhang") {
+        return 'https://cs.stanford.edu/~yzzhang/';
+    }
+    if (name_ === "Jiajun Wu") {
+        return 'https://jiajunwu.com/';
+    }
+    if (name_ === "Chuanxia Zheng") {
+        return 'https://chuanxiaz.com/';
+    }
     return "#";
 }

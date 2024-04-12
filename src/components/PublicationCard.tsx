@@ -1,5 +1,5 @@
 import { ComponentProps, Suspense } from 'react';
-import { AiFillFilePdf, AiFillGithub, AiFillVideoCamera } from 'react-icons/ai';
+import { AiFillCalculator, AiFillFilePdf, AiFillGithub, AiFillVideoCamera } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 import Banner from './Banner';
 import classes from './PublicationCard.module.css';
@@ -18,6 +18,7 @@ interface PublicationCardProps extends ComponentProps<typeof Banner> {
   pageLink?: string;
   videoLink?: string;
   arXivLink?: string;
+  demoLink?: string;
   bibtex?: string;
 }
 
@@ -34,6 +35,7 @@ function PublicationCard({
   pageLink,
   videoLink,
   arXivLink,
+  demoLink,
   bibtex,
   ...rest
 }: PublicationCardProps) {
@@ -71,6 +73,15 @@ function PublicationCard({
             <span>{abstract}</span>
           </div>
           <div >
+            {demoLink && (
+                <div className={classes.detailsIndicator} onClick={(_) => {
+                  window.open(demoLink, "_blank");
+                }}>
+                  <AiFillCalculator/>
+                  <span>Demo</span>
+                </div>
+              
+            )}
             {videoLink && (
                 <div className={classes.detailsIndicator} onClick={(_) => {
                   window.open(videoLink, "_blank");
@@ -92,7 +103,7 @@ function PublicationCard({
                   window.open(codeLink, "_blank");
                 }}>
                   <AiFillGithub/>
-                  <span>GitHub</span>
+                  <span>Code</span>
                 </div>
               )}
             {pageLink && (

@@ -69,7 +69,8 @@
 }
 
 .visual video,
-.visual picture {
+.visual picture,
+.visual img {
   max-width: 100%;
   object-fit: contain;
 }
@@ -153,10 +154,6 @@
 
 .card:not(:hover) *:not(.details-indicator) svg * {
   fill: var(--text-subdued) !important;
-}
-
-.card:not(:hover) img {
-  filter: grayscale(100%);
 }
 
 .card *:not(.details-indicator) svg * {
