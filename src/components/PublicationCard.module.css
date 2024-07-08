@@ -185,6 +185,14 @@
   right: 12.5rem;
 }
 
+.details-indicator:nth-child(5) {
+  right: 16.5rem;
+}
+
+.details-indicator:nth-child(6) {
+  right: 20.5rem;
+}
+
 .details-indicator > :first-child {
   margin-right: 0.2rem;
   font-weight: 600;

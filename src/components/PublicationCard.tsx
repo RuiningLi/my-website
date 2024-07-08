@@ -3,7 +3,8 @@ import { AiFillCalculator, AiFillFilePdf, AiFillGithub, AiFillVideoCamera } from
 import { FiExternalLink } from 'react-icons/fi';
 import Banner from './Banner';
 import classes from './PublicationCard.module.css';
-import authors_to_website from '../utils/authors'
+import authors_to_website from '../utils/authors';
+import { useState } from 'react';
 
 interface PublicationCardProps extends ComponentProps<typeof Banner> {
   title: string;
@@ -40,6 +41,9 @@ function PublicationCard({
   ...rest
 }: PublicationCardProps) {
   const me = "Ruining Li";
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <Banner {...rest}>
       <div className={classes.card}>
@@ -72,7 +76,20 @@ function PublicationCard({
             <div className={classes.tldr}>TLDR</div>
             <span>{abstract}</span>
           </div>
+          <div className={classes.bibtex}>
+            {isModalOpen && (
+              <div>
+                {bibtex}
+              </div>
+            )}
+          </div>
           <div >
+            {bibtex && (
+                <div className={classes.detailsIndicator} onClick={openModal}>
+                  <FiExternalLink/>
+                  <span>BibTex</span>
+                </div>
+              )}
             {demoLink && (
                 <div className={classes.detailsIndicator} onClick={(_) => {
                   window.open(demoLink, "_blank");
@@ -80,7 +97,6 @@ function PublicationCard({
                   <AiFillCalculator/>
                   <span>Demo</span>
                 </div>
-              
             )}
             {videoLink && (
                 <div className={classes.detailsIndicator} onClick={(_) => {

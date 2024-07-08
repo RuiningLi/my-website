@@ -117,7 +117,7 @@ function Home(_props: HomeProps) {
           <div>
             <PublicationCard
               title='DragAPart: Learning a Part-Level Motion Prior for Articulated Objects'
-              venue='Arxiv Preprint'
+              venue='ECCV'
               year='2024'
               authors={["Ruining Li", "Chuanxia Zheng", "Christian Rupprecht", "Andrea Vedaldi"]}
               abstract='Our method, DragAPart, learns a motion prior for articulated objects with diffusion models. 
@@ -130,7 +130,13 @@ function Home(_props: HomeProps) {
               pageLink='https://dragapart.github.io/'
               demoLink='https://huggingface.co/spaces/rayli/DragAPart'
               codeLink='https://github.com/RuiningLi/DragAPart'
-              video={<img src={DragAPartGIF}/>} />
+              bibtex='@article{li2024dragapart,
+                title     = {DragAPart: Learning a Part-Level Motion Prior for Articulated Objects},
+                author    = {Li, Ruining and Zheng, Chuanxia and Rupprecht, Christian and Vedaldi, Andrea},
+                journal   = {arXiv preprint arXiv:2403.15382},
+                year      = {2024}
+              }'
+              video={<img src={DragAPartGIF} />} />
           </div>
           {/* dummies  */}
           <div className={classes.newLine}></div>
@@ -156,7 +162,7 @@ function Home(_props: HomeProps) {
               paperLink='https://arxiv.org/pdf/2401.02400.pdf'
               demoLink='https://huggingface.co/spaces/Kyle-Liz/3DFauna_demo'
               pageLink='https://kyleleey.github.io/3DFauna/'
-              video={<img src={FaunaGIF}/>} />
+              video={<img src={FaunaGIF} />} />
           </div>
           {/* dummies  */}
           <div className={classes.newLine}></div>
@@ -183,7 +189,7 @@ function Home(_props: HomeProps) {
               3D assets from a single input image, whether real or generated, in a matter of seconds.'
               paperLink='https://arxiv.org/pdf/2304.10535.pdf'
               pageLink='https://farm3d.github.io/'
-              video={<img src={Farm3DGIF}/>} />
+              video={<img src={Farm3DGIF} />} />
           </div>
           {/* dummies  */}
           <div className={classes.newLine}></div>
@@ -211,7 +217,7 @@ function Home(_props: HomeProps) {
               codeLink='https://github.com/elliottwu/MagicPony'
               videoLink='https://www.youtube.com/watch?v=KoLzpESstLk'
               pageLink='https://3dmagicpony.github.io/'
-              video={<img src={MagicPonyGIF}/>} />
+              video={<img src={MagicPonyGIF} />} />
           </div>
         </Grid>
       </div>
