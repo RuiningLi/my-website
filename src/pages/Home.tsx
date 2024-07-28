@@ -131,10 +131,10 @@ function Home(_props: HomeProps) {
               demoLink='https://huggingface.co/spaces/rayli/DragAPart'
               codeLink='https://github.com/RuiningLi/DragAPart'
               bibtex='@article{li2024dragapart,
-                title     = {DragAPart: Learning a Part-Level Motion Prior for Articulated Objects},
-                author    = {Li, Ruining and Zheng, Chuanxia and Rupprecht, Christian and Vedaldi, Andrea},
-                journal   = {arXiv preprint arXiv:2403.15382},
-                year      = {2024}
+                title   = {Dragapart: Learning a part-level motion prior for articulated objects},
+                author  = {Li, Ruining and Zheng, Chuanxia and Rupprecht, Christian and Vedaldi, Andrea},
+                journal = {arXiv preprint arXiv:2403.15382},
+                year    = {2024}
               }'
               video={<img src={DragAPartGIF} />} />
           </div>
@@ -162,6 +162,12 @@ function Home(_props: HomeProps) {
               paperLink='https://arxiv.org/pdf/2401.02400.pdf'
               demoLink='https://huggingface.co/spaces/Kyle-Liz/3DFauna_demo'
               pageLink='https://kyleleey.github.io/3DFauna/'
+              bibtex='@inproceedings{li2024learning,
+                title     = {Learning the 3D Fauna of the Web},
+                author    = {Li, Zizhang and Litvak, Dor and Li, Ruining and Zhang, Yunzhi and Jakab, Tomas and Rupprecht, Christian and Wu, Shangzhe and Vedaldi, Andrea and Wu, Jiajun},
+                booktitle = {CVPR},
+                year      = {2024}
+              }'
               video={<img src={FaunaGIF} />} />
           </div>
           {/* dummies  */}
@@ -189,6 +195,12 @@ function Home(_props: HomeProps) {
               3D assets from a single input image, whether real or generated, in a matter of seconds.'
               paperLink='https://arxiv.org/pdf/2304.10535.pdf'
               pageLink='https://farm3d.github.io/'
+              bibtex='@inproceedings{jakab2024farm3d,
+                title     = {{Farm3D}: Learning Articulated 3D Animals by Distilling 2D Diffusion},
+                author    = {Jakab, Tomas and Li, Ruining and Wu, Shangzhe and Rupprecht, Christian and Vedaldi, Andrea},
+                booktitle = {3DV},
+                year      = {2024}
+              }'
               video={<img src={Farm3DGIF} />} />
           </div>
           {/* dummies  */}
@@ -217,6 +229,12 @@ function Home(_props: HomeProps) {
               codeLink='https://github.com/elliottwu/MagicPony'
               videoLink='https://www.youtube.com/watch?v=KoLzpESstLk'
               pageLink='https://3dmagicpony.github.io/'
+              bibtex='@inproceedings{wu2023magicpony,
+                author    = {Shangzhe Wu and Ruining Li and Tomas Jakab and Christian Rupprecht and Andrea Vedaldi},
+                title     = {{MagicPony}: Learning Articulated 3D Animals in the Wild},
+                booktitle = {CVPR},
+                year      = {2023}
+              }'
               video={<img src={MagicPonyGIF} />} />
           </div>
         </Grid>

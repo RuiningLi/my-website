@@ -42,8 +42,7 @@ function PublicationCard({
 }: PublicationCardProps) {
   const me = "Ruining Li";
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const flipModal = () => setIsModalOpen(prevState => !prevState);
   return (
     <Banner {...rest}>
       <div className={classes.card}>
@@ -57,17 +56,17 @@ function PublicationCard({
         </div>
         <div className={classes.text}>
           <h4 className={classes.title}>{title}</h4>
-          <p className={classes.author}>{authors.map(function(name) {
+          <p className={classes.author}>{authors.map(function (name) {
             return (
-            <span className={classes.name}>
-              <a 
-                {...(name.replace('*', '') === me ? {} : { href : authors_to_website(name) })}
-                target='_blank'
-              >
-                <span>{name}</span>
-              </a>
-              <span>{(name === authors[authors.length - 1] ? '' : ",  ")}</span>
-            </span>);
+              <span className={classes.name}>
+                <a
+                  {...(name.replace('*', '') === me ? {} : { href: authors_to_website(name) })}
+                  target='_blank'
+                >
+                  <span>{name}</span>
+                </a>
+                <span>{(name === authors[authors.length - 1] ? '' : ",  ")}</span>
+              </span>);
           })}</p>
           <div className={classes.venue}>
             <h6>{venue} {year}</h6>
@@ -78,58 +77,68 @@ function PublicationCard({
           </div>
           <div className={classes.bibtex}>
             {isModalOpen && (
-              <div>
-                {bibtex}
-              </div>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: bibtex
+                    ?.split('\n')
+                    .map((line, index, arr) => {
+                      if (index === 0 || index === arr.length - 1) {
+                        return line.trim(); // No indentation for first and last line
+                      }
+                      return '  ' + line.trim(); // 4 spaces for other lines
+                    })
+                    .join('\n') || ''
+                }}
+              />
             )}
           </div>
           <div >
             {bibtex && (
-                <div className={classes.detailsIndicator} onClick={openModal}>
-                  <FiExternalLink/>
-                  <span>BibTex</span>
-                </div>
-              )}
+              <div className={classes.detailsIndicator} onClick={flipModal}>
+                <FiExternalLink />
+                <span>BibTex</span>
+              </div>
+            )}
             {demoLink && (
-                <div className={classes.detailsIndicator} onClick={(_) => {
-                  window.open(demoLink, "_blank");
-                }}>
-                  <AiFillCalculator/>
-                  <span>Demo</span>
-                </div>
+              <div className={classes.detailsIndicator} onClick={(_) => {
+                window.open(demoLink, "_blank");
+              }}>
+                <AiFillCalculator />
+                <span>Demo</span>
+              </div>
             )}
             {videoLink && (
-                <div className={classes.detailsIndicator} onClick={(_) => {
-                  window.open(videoLink, "_blank");
-                }}>
-                  <AiFillVideoCamera/>
-                  <span>Video</span>
-                </div>
-              )}
+              <div className={classes.detailsIndicator} onClick={(_) => {
+                window.open(videoLink, "_blank");
+              }}>
+                <AiFillVideoCamera />
+                <span>Video</span>
+              </div>
+            )}
             {paperLink && (
-                <div className={classes.detailsIndicator} role='presentation' onClick={(_) => {
-                  window.open(paperLink, "_blank");
-                }}>
-                  <AiFillFilePdf/>
-                  <span>arXiv</span>
-                </div>
-              )}
+              <div className={classes.detailsIndicator} role='presentation' onClick={(_) => {
+                window.open(paperLink, "_blank");
+              }}>
+                <AiFillFilePdf />
+                <span>arXiv</span>
+              </div>
+            )}
             {codeLink && (
-                <div className={classes.detailsIndicator} onClick={(_) => {
-                  window.open(codeLink, "_blank");
-                }}>
-                  <AiFillGithub/>
-                  <span>Code</span>
-                </div>
-              )}
+              <div className={classes.detailsIndicator} onClick={(_) => {
+                window.open(codeLink, "_blank");
+              }}>
+                <AiFillGithub />
+                <span>Code</span>
+              </div>
+            )}
             {pageLink && (
-                <div className={classes.detailsIndicator} onClick={(_) => {
-                  window.open(pageLink, "_blank");
-                }}>
-                  <FiExternalLink/>
-                  <span>Project Page</span>
-                </div>
-              )}
+              <div className={classes.detailsIndicator} onClick={(_) => {
+                window.open(pageLink, "_blank");
+              }}>
+                <FiExternalLink />
+                <span>Project Page</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
