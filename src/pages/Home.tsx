@@ -15,6 +15,7 @@ import MagicPonyGIF from '../../assets/publications/MagicPony/MagicPony_thumbnai
 import Farm3DGIF from '../../assets/publications/Farm3D/Farm3D_thumbnail.gif';
 import FaunaGIF from '../../assets/publications/3DFauna/3DFauna_thumbnail.gif';
 import DragAPartGIF from '../../assets/publications/DragAPart/DragAPart_thumbnail.gif';
+import PuppetMasterGIF from '../../assets/publications/PuppetMaster/PuppetMaster_thumbnail.gif';
 
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 import { SiGooglescholar } from 'react-icons/si';
@@ -114,6 +115,40 @@ function Home(_props: HomeProps) {
         <h2>{t('PUBLICATIONS_TITLE')}</h2>
 
         <Grid>
+          <div>
+            <PublicationCard
+              title='Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics'
+              venue='ArXiv'
+              year='2024'
+              authors={["Ruining Li", "Chuanxia Zheng", "Christian Rupprecht", "Andrea Vedaldi"]}
+              abstract='Puppet-Master is an interactive video generative model that can serve as a motion prior for
+              part-level dynamics. At test time, given a single image and a sparse set of motion trajectories 
+              (i.e., drags), Puppet-Master can synthesize a video depicting realistic part-level motion faithful to 
+              the given drag interactions. It is trained on synthetic renderings of carefully curated animated 3D models, 
+              Objaverse-Animation-HQ.'
+              paperLink='https://arxiv.org/pdf/2408.04631.pdf'
+              pageLink='https://vgg-puppetmaster.github.io/'
+              codeLink='https://github.com/RuiningLi/puppet-master'
+              bibtex='@article{li2024puppetmaster,
+                title   = {Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics},
+                author  = {Li, Ruining and Zheng, Chuanxia and Rupprecht, Christian and Vedaldi, Andrea},
+                journal = {arXiv preprint arXiv:2408.04631},
+                year    = {2024}
+              }'
+              video={<img src={PuppetMasterGIF} />} />
+          </div>
+          {/* dummies  */}
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
+          <div className={classes.newLine}></div>
           <div>
             <PublicationCard
               title='DragAPart: Learning a Part-Level Motion Prior for Articulated Objects'
